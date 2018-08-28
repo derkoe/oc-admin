@@ -1,0 +1,44 @@
+{
+  "name": "oc-admin",
+  "private": true,
+  "version": "0.0.1",
+  "description": "OpenShift Admin application",
+  "scripts": {
+    "build": "stencil build --prerender",
+    "start": "stencil build --dev --watch --serve",
+    "test": "jest",
+    "test.watch": "jest --watch"
+  },
+  "dependencies": {
+    "@stencil/core": "^0.11.0",
+    "@stencil/router": "^0.2.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2",
+    "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derkoe/oc-admin.git"
+  },
+  "author": "derkoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derkoe/oc-admin"
+  },
+  "homepage": "https://github.com/derkoe/oc-admin",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}
