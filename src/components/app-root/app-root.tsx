@@ -22,7 +22,7 @@ export class AppRoot {
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url='/projects/' component='oca-projects' exact={true} />
+              <stencil-route url='/projects' component='oca-projects' exact={true} />
               <stencil-route url='/projects/:id' component='oca-project' />
               <stencil-route-redirect url="/"></stencil-route-redirect>
             </stencil-route-switch>

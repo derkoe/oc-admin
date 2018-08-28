@@ -4,7 +4,7 @@ import { MatchResults } from '@stencil/router';
 @Component({
   tag: 'oca-project'
 })
-export class Project {
+export class OcaProject {
 
   @Prop() match: MatchResults;
 
