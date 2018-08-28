@@ -1,14 +1,14 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.css'
+  tag: 'oca-home',
+  styleUrl: 'oca-home.css'
 })
-export class AppHome {
+export class OcaHome {
 
   render() {
     return (
-      <div class='app-home'>
+      <div class='oca-home'>
         <p>
           Welcome to the OpenShift administation application.
         </p>

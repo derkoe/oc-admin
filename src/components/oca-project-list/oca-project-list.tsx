@@ -2,14 +2,13 @@ import { Component } from '@stencil/core';
 
 
 @Component({
-  tag: 'oca-projects'
+  tag: 'oca-project-list'
 })
-export class OcaProjects {
+export class OcaProjectList {
 
   projectList: any;
 
   componentWillLoad() {
-    console.log('AAAAAA');
     return fetch('http://localhost:8001/apis/project.openshift.io/v1/projects')
       .then(response => response.json())
       .then(data => {
@@ -23,8 +22,9 @@ export class OcaProjects {
         <tr>
           <th>Name</th>
           <th>Display Name</th>
-          <th>Admin</th>
+          <th>Requester</th>
           <th>Cost Center</th>
+          <th>Actions</th>
         </tr>
         {this.projectList.items.map((project) =>
           <tr>
@@ -32,6 +32,7 @@ export class OcaProjects {
             <td>{project.metadata.annotations['openshift.io/display-name']}</td>
             <td>{project.metadata.annotations['openshift.io/requester']}</td>
             <td>{project.metadata.annotations['porscheinformatik.cloud/cost-center']}</td>
+            <td><stencil-route-link url={`/projects/${project.metadata.name}`}><button>Edit</button></stencil-route-link></td>
           </tr>
         )}
       </table>
